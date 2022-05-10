@@ -1,0 +1,23 @@
+@import 'default/fonts';
+@import 'default/vars';
+@import 'default/nullstyle';
+@import 'default/mixins';
+@import 'libs/slick';
+@import 'navbar';
+@import 'header';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

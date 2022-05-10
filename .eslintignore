@@ -1,0 +1,6 @@
+gulp
+dist
+.eslintrc.cjs
+gulpfile.js
+
+src/script/slick.min.js

@@ -1,0 +1,38 @@
+.navbar {
+  height: 100px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    width: calc(180px / $containerWidth * 100%);
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    width: calc(600px / $containerWidth * 100%);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    margin: 0 5px;
+    white-space: nowrap;
+    color: #fff;
+    font-size: rem(16px);
+    line-height: 150%;
+  }
+
+  &__btn {
+    @extend %orangeBtn;
+    padding: 1.5% 2.5%;
+    font-size: rem(16px);
+    line-height: 130%;
+  }
+}
+

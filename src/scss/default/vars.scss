@@ -1,0 +1,19 @@
+$containerWidth: 1140px;
+
+//* colors
+$green: #89C249;
+$sectionBg: #363A4D;
+$pageBg: #282B38;
+$orange: #E58D35;
+$gray: #3A444E;
+$grayFontColor: #85899C;
+
+//* fonts
+$mainFont: 'ProximaNova';
+$pageFontSize: 16px;
+
+%orangeBtn {
+  background-color: $orange;
+  font-family: $mainFont;
+  border-radius: 90px;
+}
