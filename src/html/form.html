@@ -1,0 +1,272 @@
+<section class="form-block">
+  <div class="container form-block__container">
+    <h2 class="form-block__title">
+      Получить рассчет стоимости доставки вашего груза
+      <span class="form-block__title-line"></span>
+    </h2>
+    <form name="calc" class="form">
+      <div class="form-step form-step1" data-step-num="0">
+        <div class="form-step__steps">
+          <div class="form-step__step-num form-step__step-num_active">
+            1
+          </div>
+          <div class="form-step__step-num">2</div>
+          <div class="form-step__step-num">3</div>
+        </div>
+
+        <div class="form-step__input-block">
+          <div class="form-step__input-container">
+            <label class="form-step__input-label" for="category-input"
+              >Категория товара:</label
+            >
+            <input
+              class="form-step__input"
+              id="category-input"
+              name="category"
+              type="text"
+              placeholder="Категория товара"
+              required
+            />
+          </div>
+
+          <div class="form-step__input-container">
+            <label class="form-step__input-label" for="cost-input"
+              >Стоимость груза:</label
+            >
+            <input
+              class="form-step__input"
+              id="cost-input"
+              name="cost"
+              type="text"
+              placeholder="Введите стоимость"
+              required
+            />
+          </div>
+
+          <div class="form-step__input-container">
+            <label class="form-step__input-label" for="weight-input"
+              >Вес груза (кг):</label
+            >
+            <input
+              class="form-step__input"
+              id="weight-input"
+              name="weight"
+              type="text"
+              placeholder="Введите вес"
+              required
+            />
+          </div>
+
+          <div class="form-step__input-container">
+            <label class="form-step__input-label" for="volume-input">
+              <p>Объем груза (м3):</p>
+              <button class="form-step__input-btn" type="button">
+                Рассчитать
+              </button>
+            </label>
+            <input
+              class="form-step__input"
+              name="volume"
+              id="volume-input"
+              type="text"
+              placeholder="Введите объем"
+              required
+            />
+          </div>
+
+          <div class="form-step__input-container">
+            <div class="form-step__input-checkbox-container">
+              <input
+                class="form-step__input-checkbox hidden-checkbox"
+                type="checkbox"
+                id="insurence-checkbox"
+                name="insurence"
+              />
+              <label
+                class="custom-checkbox"
+                for="insurence-checkbox"
+              ></label>
+
+              <p class="form-step__input-checkbox-text">Страховка</p>
+            </div>
+
+            <div class="form-step__input-checkbox-container">
+              <input
+                class="form-step__input-checkbox hidden-checkbox"
+                type="checkbox"
+                id="customs-checkbox"
+                name="customs"
+              />
+              <label class="custom-checkbox" for="customs-checkbox">
+              </label>
+
+              <p class="form-step__input-checkbox-text">
+                Таможенное оформление
+              </p>
+            </div>
+          </div>
+
+          <div class="form-step__input-container">
+            <label class="form-step__input-label" for="cod-tn-ved-input"
+              >Код ТН ВЭД:</label
+            >
+            <input
+              class="form-step__input"
+              id="cod-tn-ved-input"
+              name="cod-tn-ved"
+              type="text"
+              placeholder="Введите код"
+              required
+            />
+          </div>
+
+          <div
+            class="form-step__input-container form-step__image-container"
+          >
+            <div class="form-step__image-container-text">
+              <p>фотография.jpeg</p>
+              <button class="form-step__delete-image-btn" type="button">
+                Удалить фото
+              </button>
+            </div>
+
+
+            <input
+              class="form-step__image-input hidden-image-input"
+              type="file"
+              accept=".jpeg, .png"
+              required
+              id="image-input"
+              name="image"
+            />
+            <label class="custom-image-input" for="image-input"
+              >Загрузить фото товара</label
+            >
+
+            <div class="form-step__image-state">Добавьте фотографию</div>
+          </div>
+        </div>
+
+        <div class="form-step__btn-block">
+          <button class="form-step__next-btn form-step__btn">
+            <span>Следующий шаг</span>
+            <div class="form-step__btn-img ">
+              <img src="@img/icon/form-next.svg" alt="next" />
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="form-step form-step2 hide" data-step-num="1">
+        <div class="form-step__steps">
+          <div class="form-step__step-num form-step__step-num_active">
+            1
+          </div>
+          <div class="form-step__step-num form-step__step-num_active">
+            2
+          </div>
+          <div class="form-step__step-num">3</div>
+        </div>
+
+        <div class="form-step__input-block">
+          <div
+            class="form-step__input-container form-step__name-container"
+          >
+            <label class="form-step__input-label" for="name-input">
+              Имя:
+            </label>
+            <input
+              class="form-step__input"
+              id="name-input"
+              type="text"
+              placeholder="Ваше имя"
+              required
+            />
+          </div>
+
+          <div class="form-step__input-container">
+            <label class="form-step__input-label" for="tel-input">
+              Номер телефона:
+            </label>
+            <input
+              class="form-step__input"
+              id="tel-input"
+              type="tel"
+              placeholder="Ваш номер телефона"
+              required
+            />
+          </div>
+
+          <div class="form-step__input-container">
+            <label class="form-step__input-label" for="email-input">
+              Email:
+            </label>
+            <input
+              class="form-step__input"
+              id="email-input"
+              type="email"
+              placeholder="Введите e-mail"
+              required
+            />
+          </div>
+
+          <div
+            class="form-step__input-container form-step__textarea-container"
+          >
+            <label
+              class="form-step__input-label"
+              for="textarea-comment"
+            >
+              Комментарий:
+            </label>
+            <textarea
+              class="form-step__textarea"
+              placeholder="Подробности о товаре, описание, количество"
+              id="textarea-comment"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-step__btn-block">
+          <button class="form-step__prev-btn form-step__btn" type="button">
+            Назад
+          </button>
+          <button class="form-step__next-btn form-step__btn" type="submit">
+            <span>Следующий шаг</span>
+            <div class="form-step__btn-img">
+              <img src="@img/icon/form-next.svg" alt="next" />
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="form-step form-step3 hide" data-step-num="2">
+        <div class="form-step3__done-img">
+          <img src="@img/icon/form-done.svg" alt="done" />
+        </div>
+
+        <div class="form-step3__title-block">
+          <h3 class="form-step3__title">Спасибо за заявку!</h3>
+          <p class="form-step3__fore-title">
+            Мы обязатальено свяжемся с вами.
+          </p>
+        </div>
+
+        <div class="form-step3__list-block">
+          <h5 class="form-step3__list-title">
+            Так же для вас может быть полезно
+          </h5>
+          <ul class="form-step3__list">
+            <li class="form-step3__list-item">Услуги</li>
+            <li class="form-step3__list-item">
+              Примеры грузоперевозок
+            </li>
+            <li class="form-step3__list-item">Поиск товаров в Китае</li>
+          </ul>
+        </div>
+      </div>
+    </form>
+
+    <div class="form-block__img">
+      <img src="@img/content/form-man.png" alt="form" />
+    </div>
+  </div>
+</section>
