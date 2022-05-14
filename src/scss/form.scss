@@ -27,6 +27,7 @@
     width: 50%;
     right: 0;
     bottom: -100px;
+    z-index: -1;
     position: absolute;
     & img {
       max-width: 100%;

@@ -16,8 +16,26 @@
 
 .header-slider {
   &__item {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-
+  &__item1 {
+    background-image: url('/img/content/header-1.png');
+  }
+  
+  &__item2 {
+    background-image: url('/img/content/header-2.png');
+  }
+  
+  &__item3 {
+    background-image: url('/img/content/header-3.png');
+  }
+  
+  &__item4 {
+    background-image: url('/img/content/header-4.png');
+  }
   &__container {
     height: 100%;
     display: flex;
