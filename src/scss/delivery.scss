@@ -1,0 +1,158 @@
+.delivery {
+  margin-top: 100px;
+
+  &__container {
+    padding: 0 50px !important;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  &__slider {
+    display: flex;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: $sectionBg;
+  }
+
+  &__item-img {
+    width: 100%;
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__item-content {
+    padding: 27px 20px;
+  }
+
+  &__item-name {
+    font-size: rem(22px);
+    line-height: 125%;
+    font-weight: 700;
+    font-family: $mainFont;
+    text-align: center;
+  }
+
+  &__item-options {
+    margin: rem(15px) 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 25px;
+  }
+
+  &__item-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__item-option-img {
+  }
+
+  &__item-option-value {
+    text-align: center;
+  }
+
+  &__item-cost {
+    font-size: rem(24px);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__item-cost-value {
+    font-size: rem(45px);
+    font-weight: 700;
+  }
+
+  &__item-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__item-btn {
+    width: 100%;
+    padding: 15px 5px;
+    white-space: nowrap;
+  }
+
+  &__item-btn1 {
+    @extend %orangeBtn;
+  }
+
+  &__item-btn2 {
+    border: 1px solid $orange;
+    border-radius: 90px;
+  }
+}
+
+.delivery__slider {
+  margin: 0 -15px;
+  .slick-slide {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .slick-prev {
+    left: -55px;
+  }
+
+  .slick-next {
+    right: -55px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .delivery {
+    &__item-btn {
+      font-size: rem(12px);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .delivery {
+    &__item-content {
+      padding: 15px 10px;
+    }
+
+    &__item-cost {
+      font-size: rem(18px);
+    }
+
+    &__item-cost-value {
+      font-size: rem(36px);
+    }
+
+    &__item-btn {
+      padding: 10px 5px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .delivery {
+    margin-top: 55px;
+    margin-bottom: 35px;
+    &__container {
+      padding: 0 10px !important;
+    }
+    &__title {
+      margin-bottom: 55px;
+    }
+  }
+
+  .delivery__slider {
+    .slick-dots {
+      bottom: -30px;
+    }
+  }
+}

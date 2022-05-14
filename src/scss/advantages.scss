@@ -8,19 +8,9 @@
   }
 
   &__title {
-    text-transform: uppercase;
-    position: relative;
-    font-size: rem(36px);
-    text-align: center;
+  
     &::before {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 1px;
-      width: 85px;
-      background-color: $orange;  
+      background-color: $orange !important;  
     }
   }
 
