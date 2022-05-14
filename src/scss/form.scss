@@ -1,9 +1,9 @@
 .form-block {
   margin-top: 90px;
-  max-height: 860px;
 
   &__container {
     position: relative;
+
   }
 
   &__title {
@@ -253,15 +253,12 @@
 
 .form {
   width: 55%;
-  max-height: 650px;
 }
 
-.forn-step_active {
-}
 
 .form-step {
   transition: 300ms;
-  aspect-ratio: 1 / 1.1;
+  aspect-ratio: 1 / 1;
   background-color: $sectionBg;
   border-radius: 20px;
   min-height: 100%;
@@ -448,7 +445,7 @@
 
 @media (max-width: 1024px) {
   .form-step {
-    padding: 40px 20px 10px;
+    padding: 30px 20px 10px;
     &__step-num {
       width: 40px;
       height: 40px;
@@ -463,12 +460,13 @@
       font-size: rem(12px);
       padding: 10px;
     }
-
     &__input-block {
       grid-row-gap: 5px;
       grid-column-gap: 15px;
     }
-
+    &__image-container {
+      margin-top: 5px;
+    }
     &__btn {
       padding: 10px 15px;
       font-size: rem(12px);
@@ -476,7 +474,13 @@
     &__textarea {
       padding: 15px;
     }
+    
+    &__input-checkbox-container {
+      margin-top: 5px;
+    }
 
+    &__input-checkbox-container,
+    &__image-state,
     &__textarea,
     &__delete-image-btn,
     &__input-btn,
@@ -520,12 +524,12 @@
       font-size: rem(14px);
     }
   }
+  .custom-image-input {
+    font-size: rem(12px) !important;
+    padding: 5px 0;
+  }
 }
 
-.custom-image-input {
-  font-size: rem(12px);
-  padding: 5px 0;
-}
 
 @media (max-width: 768px) {
   .form-block {
@@ -554,11 +558,11 @@
 
   .form-step {
     aspect-ratio: auto;
+    height: 570px;
 
     &__step-num {
       width: 50px;
       height: 50px;
-      // font-size: rem(2px);
     }
 
     &__steps {
@@ -566,8 +570,6 @@
       transform: translateX(-50%);
     }
 
-    &__prev-btn {
-    }
 
     &__btn {
       min-width: 200px;
@@ -584,6 +586,7 @@
     &__input-block {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 10px;
     }
 
@@ -613,11 +616,6 @@
     &__fore-title {
       font-size: rem(16px);
       margin-top: 5px;
-    }
-
-    &__list-block {
-      
-      
     }
 
     &__list-title {
@@ -658,14 +656,16 @@
 
   .form-step {
     padding: 40px 10px 10px 10px;
-
+    height: 500px;
     &__input {
       padding: 8px;
       font-size: rem(10px);
     }
 
     &__textarea {
+      aspect-ratio: auto;
       padding: 10px;
+      height: 120px;
     }
 
     &__textarea,
