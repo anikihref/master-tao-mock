@@ -19,3 +19,9 @@ $('.header-slider').slick({
     },
   ],
 });
+
+$('.advantages-slider ').slick({
+  dots: true,
+  autoplay: true,
+  arrows: false,
+});
