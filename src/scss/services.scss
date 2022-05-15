@@ -1,0 +1,126 @@
+.services {
+  background-color: $sectionBg;
+  border-radius: 20px;
+  margin-top: 100px;
+  padding: 100px 0;
+  &__container {
+    padding: 0 70px !important;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+    &::before {
+      background-color: $orange;
+    }
+  }
+
+  &__content {
+    margin: 0 -15px;
+    .slick-dots {
+      bottom: -30px;
+    }
+
+    .slick-slide {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    .slick-prev {
+      left: -45px;
+    }
+
+    .slick-next {
+      right: -45px;
+    }
+  }
+
+  &__item {
+    height: 480px;
+    padding: 0 30px 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(4, 5, 17, 0.91) 0%, rgba(88, 88, 88, 0) 100%);
+      z-index: 100;
+    }
+    &1 {
+      background-image: url('/img/content/services/services-1.png');
+    }
+    &2 {
+      background-image: url('/img/content/services/services-2.png');
+    }
+    &3 {
+      background-image: url('/img/content/services/services-3.png');
+    }
+    &4 {
+      background-image: url('/img/content/services/services-4.png');
+    }
+  }
+
+  &__item-title {
+    z-index: 1000;
+
+    font-size: rem(22px);
+    font-weight: 700; 
+    line-height: 130%;
+  }
+
+  &__item-text {
+    z-index: 1000;
+
+    font-size: rem(15px);
+    font-weight: 400;
+    line-height: 120%;
+    margin: 13px 0;
+  }
+
+  &__item-btn {
+    z-index: 1000;
+
+    max-width: 150px;
+    padding: 15px 0;
+    border: 1px solid $orange;
+    border-radius: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding-top: 60px;  
+    width: 100vw;
+    margin-left: -30px;
+    border-radius: 0;
+    &__item {
+      padding: 0 20px 20px 20px;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+    }
+
+    &__item-text {
+      font-size: rem(12px);
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .services {
+    margin-left: -20px;
+  }
+}
