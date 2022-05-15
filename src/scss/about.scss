@@ -1,0 +1,153 @@
+.about {
+  overflow: hidden;
+  margin-top: 90px;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  &__body {
+  }
+
+  &__title {
+    margin-bottom: 65px;
+    text-align: left !important;
+    &::before {
+      left: 0% !important;
+      transform: translateX(0) !important;
+    }
+  }
+
+  &__content {
+  }
+
+  &__text {
+    font-size: rem(18px);
+    line-height: 160%;
+    font-weight: 400;
+  }
+
+  &__text-1 {
+  }
+
+  &__text-2 {
+    margin-top: 30px;
+  }
+
+  &__img {
+    background-color: $sectionBg;
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 30%;
+      height: 70%;
+      bottom: 55px;
+      left: 35px;
+      position: absolute;
+      background-image: url('/img/content/about-pen.png');
+      background-position: center;
+      background-size: cover;
+      z-index: 1000;
+    }
+    & img {
+      max-width: 100%;
+      top: -20px;
+      right:-40px ;
+      position: absolute;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .about {
+  
+    &__content {
+    }
+  
+    &__text {
+      font-size: rem(16px);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+   
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  
+    &__body {
+    }
+  
+    &__title {
+      text-align: center !important;
+      margin-bottom: 50px;
+      &::before {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+      }
+    } 
+  
+    &__content {
+    }
+  
+    &__text {
+      font-size: rem(14px);
+    }
+  
+    &__text-1 {
+    }
+  
+    &__text-2 {
+      
+    }
+  
+    &__img {
+      aspect-ratio: 1 / 1;
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+      &::before {
+        bottom: 50px;
+        left: 20px;
+      }
+      & img {
+        right: -20px;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .about {
+    width: 100vw;
+    margin-left: -30px;
+    
+  }
+}
+
+@media (max-width: 425px) {
+  .about {
+    width: 100vw;
+    margin-left: -20px;
+    &__img {
+      width: 80%;
+      &::before {
+          bottom: 20px;
+      }
+      & img {
+       
+      }
+    }
+  }
+
+  
+}
