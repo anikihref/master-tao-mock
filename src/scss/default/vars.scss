@@ -16,4 +16,7 @@ $pageFontSize: 16px;
   background-color: $orange;
   font-family: $mainFont;
   border-radius: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
