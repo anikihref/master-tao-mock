@@ -8,6 +8,7 @@
     max-width: 1800px;
     aspect-ratio: 16 / 9;
     margin: 0 auto;
+   
   }
 
   &__container {
@@ -20,19 +21,32 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 500;
+      background: linear-gradient(0deg, rgba(4, 5, 17, 0.6), rgba(4, 5, 17, 0.6));
+    }
   }
   &__item1 {
     background-image: url('/img/content/header-1.png');
   }
-  
+
   &__item2 {
     background-image: url('/img/content/header-2.png');
   }
-  
+
   &__item3 {
     background-image: url('/img/content/header-3.png');
   }
-  
+
   &__item4 {
     background-image: url('/img/content/header-4.png');
   }
@@ -44,7 +58,8 @@
   }
 
   &__item-title {
-    font-size: rem(70px);
+    z-index: 1000;
+    font-size: rem(56px);
     width: 580px;
     font-weight: 700;
     line-height: 126%;
@@ -52,6 +67,7 @@
   }
 
   &__item-pre-title {
+    z-index: 1000;
     font-weight: 400;
     font-size: rem(20px);
     line-height: 135%;
@@ -61,11 +77,81 @@
 
   &__btn {
     @extend %orangeBtn;
+    z-index: 1000;
     max-width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px 20px 28px;
     max-height: 70px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-slider {
+    &__item-title {
+      font-size: rem(36px);
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-slider {
+  
+    &__item-title {
+      
+    }
+  
+    &__item-pre-title {
+      font-size: rem(16px);
+      width: 300px;
+      margin-bottom: 25px;
+      margin-top: 5px;
+    }
+  
+    &__btn {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header__body {
+    aspect-ratio: 3 / 5;
+  }
+
+  .header-slider {
+  
+    &__container {
+
+      align-items: center;
+      text-align: center;
+
+    } 
+    &__btn {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header-slider {
+    &__container {
+      padding: 0 40px;
+    }
+    &__item-title {
+      width: auto;
+      font-size: rem(32px);
+    }
+  
+    &__item-pre-title {
+      font-size: rem(16px);
+      width: auto;
+    }
+  
+    &__btn {
+      padding: 15px;
+    }
   }
 }
