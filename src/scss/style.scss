@@ -2,6 +2,7 @@
 @import 'default/vars';
 @import 'default/nullstyle';
 @import 'default/mixins';
+
 @import 'libs/slick';
 @import 'navbar';
 @import 'header';
@@ -14,6 +15,9 @@
 @import 'cooperation';
 
 
+body.non-scrollable {
+  overflow: hidden;
+}
 
 .wrapper {
   display: flex;

@@ -2,26 +2,23 @@ const deleteFormImg = document.querySelector('.form-step__delete-image-btn');
 const imgState = document.querySelector('.form-step__image-state');
 const imgInput = document.querySelector('.form-step__image-input');
 
+const formSteps = [...document.querySelectorAll('.form-step')];
+const form = document.querySelector('.form');
+const TRANSITION_DURATION = 300;
+
+const burger = document.querySelector('.navbar__burger');
+const burgerContent = document.querySelector('.navbar__burger-content');
+
 function clearImgInputValue() {
   imgState.textContent = 'Добавьте фотографию';
   imgState.classList.remove('active');
   imgInput.value = '';
 }
 
-imgInput.addEventListener('change', (e) => {
-  imgState.textContent = 'Фотография добавлена';
-  imgState.classList.add('active');
-
-  if (!e.target.value) {
-    clearImgInputValue();
-  }
-});
-
-deleteFormImg.addEventListener('click', clearImgInputValue);
-
-const formSteps = [...document.querySelectorAll('.form-step')];
-const form = document.querySelector('.form');
-const TRANSITION_DURATION = 300;
+function burgerListener() {
+  burgerContent.classList.toggle('active');
+  document.body.classList.toggle('non-scrollable');
+}
 
 function removeAnimationClasses(currentStep) {
   formSteps.forEach((step) => {
@@ -77,3 +74,16 @@ form.addEventListener('click', (e) => {
 
   removeAnimationClasses(currentStep);
 });
+
+imgInput.addEventListener('change', (e) => {
+  imgState.textContent = 'Фотография добавлена';
+  imgState.classList.add('active');
+
+  if (!e.target.value) {
+    clearImgInputValue();
+  }
+});
+
+burger.addEventListener('click', burgerListener);
+
+deleteFormImg.addEventListener('click', clearImgInputValue);
