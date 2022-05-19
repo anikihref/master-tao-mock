@@ -62,6 +62,10 @@
   &__link {
     text-decoration: underline;
     color: $grayFontColor;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
 

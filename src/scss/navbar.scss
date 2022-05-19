@@ -24,11 +24,19 @@
   }
 
   &__link {
+    transition: opacity 200ms;
+    opacity: .5;
     white-space: nowrap;
     color: #fff;
     font-size: rem(16px);
     line-height: 150%;
+
+    &:hover {
+      opacity: 1;
+    }
   }
+
+
 
   &__btn {
     @extend %orangeBtn;
